@@ -134,12 +134,14 @@ if name == "main":
  ```
 
 2.  Исправить строки.
+```
 if __name__=="__main__"
 app = Flask(__name__)
+```
 
 (Использованная литература: [https://www.codiga.io/blog/python-jinja2-autoescape/])
 
-**2.2**
+**2.2.2**
 
 ```
 from flask import Flask, request
