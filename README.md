@@ -9,7 +9,7 @@
 
 (так как в моём регионе невозможно создавать закрытые репозитории, данную информацию приложу в письме)
 
-**2.1 Security code review**
+**2.1. Security code review**
 
 Требуется провести анализ кода на GO с точки зрения безопасности и подготовить отчет по следующим пунктам:
 
@@ -125,12 +125,15 @@ if name == "main":
 3. Уязвимость в `if name == "main"` - сравнения не произойдёт (п.1 - переменная n не определена).
 
 Методы решения: 
-1. ```if not name:
+1. Валидация переменных.
+ ```
+    if not name:
         return "Пожалуйста, введите имя"
-      output = Template('Привет {name}! Твой возраст {age}).rendere(name=name, age=age)
-      return output
-```
-2. if __name__=="__main__"
+     output = Template('Привет {name}! Твой возраст {age}).rendere(name=name, age=age)
+     return output
+    ```
+2.  Исправить строки.
+if __name__=="__main__"
 app = Flask(__name__)
 
 (Использованная литература: [https://www.codiga.io/blog/python-jinja2-autoescape/])
@@ -172,7 +175,6 @@ app = Flask(__name__)
 def dns_lookup():
     hostname = request.values.get('hostname')
 
-    # Валидация и экранирование данных
     if not re.match(r'^[a-zA-Z0-9.-]*$', hostname):
         return "Invalid hostname"
 
