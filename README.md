@@ -131,7 +131,8 @@ if name == "main":
         return "Пожалуйста, введите имя"
      output = Template('Привет {name}! Твой возраст {age}).rendere(name=name, age=age)
      return output
-    ```
+ ```
+
 2.  Исправить строки.
 if __name__=="__main__"
 app = Flask(__name__)
@@ -140,7 +141,8 @@ app = Flask(__name__)
 
 **2.2**
 
-```from flask import Flask, request
+```
+from flask import Flask, request
 import subprocess
 
 app = Flask(name)
